@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 import { Habit } from './models/habit';
 
@@ -10,6 +11,12 @@ import { Habit } from './models/habit';
 
 export class AppComponent {
   public adding: Boolean = false;
+
+  public habitForm = new FormGroup({
+    name: new FormControl(''),
+    frequency: new FormControl(''),
+    description: new FormControl(''),
+  });
 
   public habits: Habit[] = [
     <Habit>{
@@ -25,4 +32,9 @@ export class AppComponent {
         'The weeds get so out of hand if they wait any longer, and I like how nice our home looks with a clean lawn.',
     },
   ];
+
+  public onSubmit() {
+    this.habits.push(this.habitForm.value as Habit);
+    this.adding = false;
+  }
 }
