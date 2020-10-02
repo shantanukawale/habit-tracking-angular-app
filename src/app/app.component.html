@@ -5,7 +5,7 @@
   </mat-toolbar>
 </div>
 
-<div class="add-form-container" *ngIf="adding">
+<div class="add-form-container" *ngIf="adding || editing">
   <mat-card>
     <mat-card-title>Add New Habit</mat-card-title>
     <hr />
@@ -42,7 +42,7 @@
   </mat-card>
 </div>
 
-<div class="all-habits" *ngIf="!adding">
+<div class="all-habits" *ngIf="!adding && !editing">
   <h1>All Habits</h1>
   <button mat-raised-button color="accent" (click)="adding = !adding">
     Add New Habit
@@ -63,6 +63,7 @@
         <mat-icon
           class="habit-icon"
           color="primary"
+          (click)="setEditForm(habit, index)"
           >edit</mat-icon
         >
         <mat-icon class="habit-icon" color="warn"
