@@ -58,4 +58,8 @@ export class AppComponent {
     this.editing = true;
     this.editingIndex = index;
   }
+
+  public onDelete(index: number) {
+    this.habits.splice(index, 1);
+  }
 }
