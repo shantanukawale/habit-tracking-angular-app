@@ -9,6 +9,8 @@ import { Habit } from './models/habit';
 })
 
 export class AppComponent {
+  public adding: Boolean = false;
+
   public habits: Habit[] = [
     <Habit>{
       name: '15 Minute Walk',
