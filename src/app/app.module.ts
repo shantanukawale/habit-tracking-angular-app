@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
