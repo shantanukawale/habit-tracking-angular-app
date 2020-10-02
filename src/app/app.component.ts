@@ -7,6 +7,7 @@ import { Habit } from './models/habit';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent {
   public habits: Habit[] = [
     <Habit>{
