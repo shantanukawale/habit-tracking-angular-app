@@ -7,7 +7,10 @@ import { Habit } from './models/habit';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent {
+  public adding: Boolean = false;
+
   public habits: Habit[] = [
     <Habit>{
       name: '15 Minute Walk',
